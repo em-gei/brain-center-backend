@@ -7,7 +7,7 @@ COPY pom.xml ./
 RUN mvn dependency:go-offline
 
 # Copia il resto del codice
-COPY src ./src
+COPY ./src ./src
 
 # Compila il progetto
 RUN mvn package -Dquarkus.package.type=uber-jar -DskipTests
