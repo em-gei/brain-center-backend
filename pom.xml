@@ -71,6 +71,11 @@
             <artifactId>lombok</artifactId>
             <version>1.18.42</version>
         </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-container-image-docker</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- TEST -->
         <dependency>
