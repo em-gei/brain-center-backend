@@ -5,11 +5,8 @@ FROM maven:3.9.6-eclipse-temurin-17-focal AS builder
 # Imposta la directory di lavoro all'interno del container
 WORKDIR /usr/src/app
 
-# Copia i file di configurazione (pom.xml) per prima, per ottimizzare la cache Docker
-COPY pom.xml .
-
-# Copia il codice sorgente
-COPY src src
+# Copy everything and build the project
+COPY . .
 
 # Esegui la compilazione Maven
 # -Dquarkus.package.type=uber-jar crea il runner JAR.
